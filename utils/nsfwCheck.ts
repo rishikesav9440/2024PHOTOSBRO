@@ -23,9 +23,9 @@ class NSFWPredictor {
 
   predict(element: HTMLImageElement, guesses: number) {
     if (!this.model) {
-      console.log("Some error occured, please try again later!");
+      throw new Error("Some error occured, please try again later!");
     }
-
+    return this.model.classify(element, guesses);
   }
 
   async predictImg(file: File, guesses = 5) {
