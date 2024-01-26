@@ -25,7 +25,7 @@ class NSFWPredictor {
     if (!this.model) {
       console.log("Some error occured, please try again later!");
     }
-    return this.model.classify(element, guesses);
+
   }
 
   async predictImg(file: File, guesses = 5) {
